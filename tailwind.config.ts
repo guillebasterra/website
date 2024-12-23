@@ -1,18 +1,21 @@
-import type { Config } from "tailwindcss";
+import { Config } from 'tailwindcss';
 
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config: Config = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Poppins"', 'Arial', 'sans-serif'], // Replace with your desired font
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        gray: {
+          100: '#f9f9f9', // Light background
+          900: '#333333', // Dark text
+        },
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
