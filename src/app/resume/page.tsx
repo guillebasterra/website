@@ -1,6 +1,6 @@
 export default function Resume() {
     return (
-      <main style={{ padding: '2rem' }}>
+      <main>
         <h1>Resume</h1>
         <p>Comp sci major</p>
       </main>
