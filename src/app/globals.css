@@ -15,11 +15,9 @@
   }
 }
 
-
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Poppins', Arial, sans-serif;
-  @apply font-sans text-gray-900 bg-gray-100 p-8;
+  @apply font-sans text-gray-900 bg-gray-100;
+  margin: 0;
 }
+
+
