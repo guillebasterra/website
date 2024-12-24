@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-gray-100">
         {/* Main Layout */}
-        <div className="flex h-screen p-10">
+        <div className="flex h-screen p-16">
           {/* Sidebar for Large Screens */}
           <aside className="hidden md:flex w-64 p-10 bg-white shadow-md flex-col space-y-6">
             <Link href="/" className="text-3xl font-sans font-bold text-gray-900 hover:underline">
@@ -38,18 +38,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ☰
           </button>
 
-          {/* Pull-Out Menu */}
+          {/* Pull-Out Menu with Slide Animation */}
           <div
             className={`fixed inset-0 z-40 transition-all duration-300 ${
               menuOpen ? 'bg-black bg-opacity-50' : 'pointer-events-none'
             }`}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuOpen(false)} // Close menu when clicking the background
           >
             <aside
               className={`fixed top-0 right-0 w-64 h-full bg-white p-6 shadow-lg flex flex-col space-y-6 transform transition-transform duration-300 ${
                 menuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the menu
             >
               <button
                 className="text-right text-xl font-bold"
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
 
           {/* Content Area */}
-          <main className="flex-grow ml-14 p-4 md:p-8 overflow-hidden">{children}</main>
+          <main className="flex-grow ml-4 md:ml-14 p-4 md:p-8 overflow-auto">{children}</main>
         </div>
       </body>
     </html>

@@ -1,9 +1,5 @@
-export default function Resume() {
-    return (
-      <main>
-        <h1>Resume</h1>
-        <p>Comp sci major</p>
-      </main>
-    );
-  }
-  
+import Resume from "../components/Resume";
+
+export default function ResumePage() {
+  return <Resume />;
+}
