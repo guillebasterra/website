@@ -20,8 +20,7 @@ export default function Resume() {
   }, []);
 
   return (
-    <div className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-4xl font-bold mb-6 text-center">Resume</h1>
+    <div className="p-8 max-w-6xl mx-auto">
       <div
         className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: resumeContent }}

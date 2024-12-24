@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <ContactLayout>
-      <div className="max-w-5xl w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-5xl w-full px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-2">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 pb-2">Guillermo Basterra</h1>
           <a
