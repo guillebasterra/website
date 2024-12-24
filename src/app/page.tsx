@@ -1,8 +1,11 @@
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-3xl font-bold mb-4">Welcome to My Personal Website!</h1>
-      <p className="text-lg">Let’s build something amazing 🚀</p>
+    <main className="flex items-center justify-center h-full w-full overflow-hidden">
+      <img
+        src="/images/horse_transparent.png"
+        alt="Description"
+        className="object-contain max-w-[calc(100vw-256px)] max-h-[90vh] md:max-w-[calc(100vw-64px)]"
+      />
     </main>
   );
 }

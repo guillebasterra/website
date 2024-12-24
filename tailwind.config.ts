@@ -5,7 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Poppins"', 'Arial', 'sans-serif'], // Replace with your desired font
+        serif: ['Courier Prime', 'serif'], // Add Newsreader to serif
+        sans: ['Poppins', 'sans-serif'], // Default sans font (optional)
       },
       colors: {
         gray: {
