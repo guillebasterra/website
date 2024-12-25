@@ -21,10 +21,13 @@ export default function Resume() {
 
   return (
     <div className="p-8 max-w-6xl mx-auto">
+
       <div
         className="prose max-w-none"
         dangerouslySetInnerHTML={{ __html: resumeContent }}
       ></div>
+
     </div>
+    
   );
 }

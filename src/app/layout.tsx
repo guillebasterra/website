@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./globals.css";
+import { FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,9 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="flex  relative">
           {/* Sidebar for Large Screens */}
           <aside
-            className="hidden md:flex fixed top-16 bottom-16 left-16 w-64 bg-white shadow-md flex-col justify-between p-10"
+            className="hidden md:flex fixed top-16 bottom-16 left-16 w-64  flex-col justify-between p-10"
             style={{
-              height: "calc(100vh - 13vh)", // Keeps the floating menu equal distance from the top and bottom
+              height: "calc(100vh - 10vh)", // Keeps the floating menu equal distance from the top and bottom
             }}
           >
             <div>
@@ -37,6 +39,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               </nav>
             </div>
+            {/* Social Links */}
+            <div className="flex flex-col items-left mt-10">
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/guillermo-basterra-diezhandino"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 hover:text-gray-1000"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+                <a
+                  href="https://www.instagram.com/guillebasterra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 hover:text-gray-1000"
+                >
+                  <FaInstagram size={24} />
+                </a>
+                <a
+                  href="https://www.twitter.com/your-twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 hover:text-gray-1000"
+                >
+                  <FaTwitter size={24} />
+                </a>
+              </div>
+              <p className="text-gray-500 text-sm mt-4 text-left">
+                © 2024 Guillermo Basterra
+              </p>
+            </div>
+
           </aside>
 
           {/* Hamburger Menu for Small Screens */}
@@ -78,6 +113,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/contact" className="text-lg text-gray-700 hover:text-gray-900">
                 Contact
               </Link>
+              {/* Social Links */}
+                <div className="flex flex-col items-center mt-10">
+                  <div className="flex space-x-4">
+                    <a
+                      href="https://www.linkedin.com/in/your-linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:text-gray-900"
+                    >
+                      <FaLinkedin size={24} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/your-instagram"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:text-gray-900"
+                    >
+                      <FaInstagram size={24} />
+                    </a>
+                    <a
+                      href="https://www.twitter.com/your-twitter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 hover:text-gray-900"
+                    >
+                      <FaTwitter size={24} />
+                    </a>
+                  </div>
+                  <p className="text-gray-500 text-sm mt-4 text-center">
+                    © 2024 Guillermo Basterra
+                  </p>
+                </div>
+
             </aside>
           </div>
 
