@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="flex  relative">
           {/* Sidebar for Large Screens */}
           <aside
-            className="hidden md:flex fixed top-16 bottom-16 left-16 w-64  flex-col justify-between p-10"
+            className="hidden md:flex fixed top-16 bottom-16 left-16 w-64  shadow flex-col justify-between p-9"
             style={{
               height: "calc(100vh - 10vh)", // Keeps the floating menu equal distance from the top and bottom
             }}
