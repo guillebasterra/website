@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./globals.css";
-import { FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaSquareYoutube } from "react-icons/fa6";
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,6 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <div>
+              <img
+                src="/images/nook.png"
+                alt="Description"
+                className="object-contain w-40"
+              />
               <Link
                 href="/"
                 className="text-3xl font-sans font-bold text-gray-900 hover:line-through"
@@ -51,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <FaLinkedin size={24} />
                 </a>
                 <a
-                  href="https://www.instagram.com/guillebasterra"
+                  href="https://www.instagram.com/willybasterra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-900 hover:text-gray-1000"
@@ -59,12 +65,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <FaInstagram size={24} />
                 </a>
                 <a
-                  href="https://www.twitter.com/your-twitter"
+                  href="https://www.youtube.com/@guilleb4sterra"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-900 hover:text-gray-1000"
                 >
-                  <FaTwitter size={24} />
+                  <FaSquareYoutube size={24} />
                 </a>
               </div>
               <p className="text-gray-500 text-sm mt-4 text-left">
