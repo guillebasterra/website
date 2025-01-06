@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; 
 import "./globals.css";
-import { FaLinkedin, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaInstagram} from "react-icons/fa";
 import { FaSquareYoutube } from "react-icons/fa6";
 
 
@@ -22,10 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <div>
-              <img
+              <Image
                 src="/images/nook.png"
                 alt="Description"
-                className="object-contain w-40"
+                width={160}  // Set the desired width (adjust based on needs)
+                height={160} // Set the desired height (adjust based on needs)
+                className="object-contain"
               />
               <Link
                 href="/"
@@ -139,12 +142,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       <FaInstagram size={24} />
                     </a>
                     <a
-                      href="https://www.twitter.com/your-twitter"
+                      href="https://www.youtube.com/@guilleb4sterra"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 hover:text-gray-900"
+                      className="text-gray-900 hover:text-gray-1000"
                     >
-                      <FaTwitter size={24} />
+                      <FaSquareYoutube size={24} />
                     </a>
                   </div>
                   <p className="text-gray-500 text-sm mt-4 text-center">
