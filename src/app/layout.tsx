@@ -126,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="flex flex-col items-center mt-10">
                   <div className="flex space-x-4">
                     <a
-                      href="https://www.linkedin.com/in/your-linkedin"
+                      href="https://www.linkedin.com/in/guillermo-basterra-diezhandino"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-700 hover:text-gray-900"
@@ -134,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       <FaLinkedin size={24} />
                     </a>
                     <a
-                      href="https://www.instagram.com/your-instagram"
+                      href="https://www.instagram.com/willybasterra"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-700 hover:text-gray-900"
