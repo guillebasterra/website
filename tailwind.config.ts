@@ -5,8 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Courier Prime', 'serif'], // Add Newsreader to serif
-        sans: ['Poppins', 'sans-serif'], // Default sans font (optional)
+        serif: ['Courier Prime', 'serif'], // Serif font for body text
+        sans: ['Poppins', 'sans-serif'],  // Sans-serif font for headers
       },
       colors: {
         gray: {
@@ -14,9 +14,39 @@ const config: Config = {
           900: '#333333', // Dark text
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontFamily: 'Poppins, sans-serif', // Sans-serif font for h1
+            },
+            h2: {
+              fontFamily: 'Poppins, sans-serif', // Sans-serif font for h2
+            },
+            h3: {
+              fontFamily: 'Poppins, sans-serif', // Sans-serif font for h3
+            },
+            h4: {
+              fontFamily: 'Poppins, sans-serif', // Sans-serif font for h4
+            },
+            h5: {
+              fontFamily: 'Poppins, sans-serif', // Sans-serif font for h5
+            },
+            h6: {
+              fontFamily: 'Poppins, sans-serif', // Sans-serif font for h6
+            },
+            p: {
+              fontFamily: 'Courier Prime, serif', // Serif font for paragraphs
+            },
+            li: {
+              fontFamily: 'Courier Prime, serif', // Serif font for list items
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 
 export default config;

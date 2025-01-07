@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 alt="Description"
                 width={160}  // Set the desired width (adjust based on needs)
                 height={160} // Set the desired height (adjust based on needs)
-                className="object-contain"
+                className="object-contain mb-4"
               />
               <Link
                 href="/"
@@ -85,11 +85,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* Hamburger Menu for Small Screens */}
           <button
-            className="fixed top-4 right-4 z-50 md:hidden p-2 bg-gray-900 text-white rounded"
-            onClick={() => setMenuOpen(!menuOpen)}
+            className={`fixed top-4 right-4 z-50 md:hidden p-2  text-black rounded transition-opacity ${
+              menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+            onClick={() => setMenuOpen(true)}
           >
             ☰
           </button>
+
 
           {/* Pull-Out Menu */}
           <div
@@ -99,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             onClick={() => setMenuOpen(false)}
           >
             <aside
-              className={`fixed top-0 right-0 w-64 h-full bg-white p-6 shadow-lg flex flex-col space-y-6 transform transition-transform duration-300 ${
+              className={`fixed top-0 right-0 w-64 h-full bg-white p-2 shadow-lg flex flex-col space-y-0 transform transition-transform duration-300 ${
                 menuOpen ? "translate-x-0" : "translate-x-full"
               }`}
               onClick={(e) => e.stopPropagation()}
@@ -110,20 +113,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 ×
               </button>
-              <Link href="/" className="text-lg text-gray-700 hover:text-gray-900">
-                Home
-              </Link>
-              <Link href="/about" className="text-lg text-gray-700 hover:text-gray-900">
-                About
-              </Link>
-              <Link href="/resume" className="text-lg text-gray-700 hover:text-gray-900">
-                Resume
-              </Link>
-              <Link href="/contact" className="text-lg text-gray-700 hover:text-gray-900">
-                Contact
-              </Link>
+              <div className="flex flex-col items-center justify-start h-screen m-0 p-0">
+                <Image
+                  src="/images/nook.png"
+                  alt="Description"
+                  width={130}  // Set the desired width (adjust based on needs)
+                  height={130} // Set the desired height (adjust based on needs)
+                  className="mb-6"
+                />
+              </div>
+              <div className="flex flex-col space-y-6 ml-10">
+                <Link href="/" className="text-lg text-gray-700 hover:text-gray-900">
+                  Home
+                </Link>
+                <Link href="/about" className="text-lg text-gray-700 hover:text-gray-900">
+                  About
+                </Link>
+                <Link href="/resume" className="text-lg text-gray-700 hover:text-gray-900">
+                  Resume
+                </Link>
+                <Link href="/contact" className="text-lg text-gray-700 hover:text-gray-900">
+                  Contact
+                </Link>
+              </div>
               {/* Social Links */}
-                <div className="flex flex-col items-center mt-10">
+                <div className="flex flex-col items-center justify-end h-screen  mt-10">
                   <div className="flex space-x-4">
                     <a
                       href="https://www.linkedin.com/in/guillermo-basterra-diezhandino"
